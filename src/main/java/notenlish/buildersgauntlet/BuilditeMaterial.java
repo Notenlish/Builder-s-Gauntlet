@@ -1,0 +1,46 @@
+package notenlish.buildersgauntlet;
+
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAsset;
+import net.minecraft.world.item.equipment.EquipmentAssets;
+
+import java.util.Map;
+
+public class BuilditeMaterial {
+    // #region base_durability
+    public static final int BASE_DURABILITY = 15;
+    // #endregion base_durability
+
+    // #region material_key
+    public static final ResourceKey<EquipmentAsset> BUILDITE_ARMOR_MATERIAL_KEY = ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "buildite"));
+    // #endregion material_key
+
+    // #region repair_tag
+    public static final TagKey<Item> REPAIRS_BUILDITE_ARMOR = TagKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "repairs_buildite_armor"));
+    // #endregion repair_tag
+
+    // #region buildite_armor_material
+    public static final ArmorMaterial INSTANCE = new ArmorMaterial(
+            BASE_DURABILITY,
+            Map.of(
+                    ArmorType.HELMET, 3,
+                    ArmorType.CHESTPLATE, 8,
+                    ArmorType.LEGGINGS, 6,
+                    ArmorType.BOOTS, 3
+            ),
+            5,
+            SoundEvents.ARMOR_EQUIP_IRON,
+            0.0F,
+            0.0F,
+            REPAIRS_BUILDITE_ARMOR,
+            BUILDITE_ARMOR_MATERIAL_KEY
+    );
+    // #endregion buildite_armor_material
+}
