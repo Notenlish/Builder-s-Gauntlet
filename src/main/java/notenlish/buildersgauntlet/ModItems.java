@@ -2,12 +2,14 @@ package notenlish.buildersgauntlet;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.Unit;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
@@ -34,15 +36,13 @@ public class ModItems {
     public static final ToolMaterial BUILDITE_TOOL_MATERIAL = new ToolMaterial(
             INCORRECT_FOR_BUILDITE_TOOL, // incorrect blocks for drops
             67, // Six Seveen!
-            4.0F,
+            6.0F,  // iron is 6.0F
             0.0F,
             22,
             BuilditeMaterial.REPAIRS_BUILDITE_ARMOR
     );
 
-    public static final Item BUILDERS_GAUNTLET = register(ModItemIds.BUILDERS_GAUNTLET, Item::new, new Item.Properties().stacksTo(1).pickaxe(BUILDITE_TOOL_MATERIAL,1f ,1f));
-
-
+    public static final Item BUILDERS_GAUNTLET = register(ModItemIds.BUILDERS_GAUNTLET, Item::new, new Item.Properties().component(DataComponents.UNBREAKABLE, Unit.INSTANCE).stacksTo(1).pickaxe(BUILDITE_TOOL_MATERIAL,1f ,1f));
 
     public static void initialize() {
         // Get the event for modifying entries in the ingredients group.
