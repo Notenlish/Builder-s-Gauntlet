@@ -7,6 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.Unit;
@@ -28,10 +29,13 @@ public class ModItems {
         return item;
     }
 
+    // these #region stuff are not required, fabric docs uses them to specify a portion of the code.
     // #region buildite_incorrect_blocks_tag
     public static final TagKey<Block> INCORRECT_FOR_BUILDITE_TOOL = TagKey.create(Registries.BLOCK,
             Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "incorrect_for_buildite_tool"));
     // #endregion buildite_incorrect_blocks_tag
+
+    public static final TagKey<Block> MINEABLE_WITH_BUILDERS_GAUNTLET = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "mineable_with_builders_gauntlet"));
 
     public static final ToolMaterial BUILDITE_TOOL_MATERIAL = new ToolMaterial(
             INCORRECT_FOR_BUILDITE_TOOL, // incorrect blocks for drops
@@ -42,7 +46,14 @@ public class ModItems {
             BuilditeMaterial.REPAIRS_BUILDITE_ARMOR
     );
 
-    public static final Item BUILDERS_GAUNTLET = register(ModItemIds.BUILDERS_GAUNTLET, Item::new, new Item.Properties().component(DataComponents.UNBREAKABLE, Unit.INSTANCE).stacksTo(1).pickaxe(BUILDITE_TOOL_MATERIAL,1f ,1f));
+    public static final Item BUILDERS_GAUNTLET = register(
+            ModItemIds.BUILDERS_GAUNTLET,
+            Item::new,
+            new Item.Properties().component(
+                    DataComponents.UNBREAKABLE,
+                    Unit.INSTANCE
+            ).stacksTo(1).tool(BUILDITE_TOOL_MATERIAL, MINEABLE_WITH_BUILDERS_GAUNTLET, 1f, 1f, 0.0F)
+    );
 
     public static void initialize() {
         // Get the event for modifying entries in the ingredients group.
