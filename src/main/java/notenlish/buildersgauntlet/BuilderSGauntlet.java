@@ -21,7 +21,8 @@ public class BuilderSGauntlet implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.initialize();
+		LOGGER.info("Initialised Builder's Gauntlet mod!");
 	}
 
 	public static Identifier id(String path) {
