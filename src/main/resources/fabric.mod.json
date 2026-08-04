@@ -3,13 +3,12 @@
 	"id": "builders-gauntlet",
 	"version": "${version}",
 	"name": "Builder's Gauntlet",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Combines pickaxe, axe and shovel into 1 tool! Perfect for builders.",
 	"authors": [
-		"Me!"
+		"Notenlish"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/notenlish/builder-s-gauntlet"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/builders-gauntlet/icon.png",
