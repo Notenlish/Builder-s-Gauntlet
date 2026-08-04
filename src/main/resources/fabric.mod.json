@@ -10,7 +10,7 @@
 	"contact": {
 		"sources": "https://github.com/notenlish/builder-s-gauntlet"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/builders-gauntlet/icon.png",
 	"environment": "*",
 	"entrypoints": {
