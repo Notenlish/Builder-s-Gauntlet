@@ -1,6 +1,24 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "builders-gauntlet:item/builders_gauntlet"
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "builders-gauntlet:item/builders_gauntlet"
+        },
+        "when": [
+          "gui",
+          "ground",
+          "fixed",
+          "on_shelf"
+        ]
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "builders-gauntlet:item/builders_gauntlet_in_hand"
+    },
+    "property": "minecraft:display_context"
   }
 }
