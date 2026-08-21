@@ -1,6 +1,8 @@
 package notenlish.buildersgauntlet;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -8,16 +10,20 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.Unit;
 
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.block.Block;
 
@@ -49,7 +55,7 @@ public class ModItems {
     public static final Item BUILDERS_GAUNTLET =
             register(ModItemIds.BUILDERS_GAUNTLET,
                     Item::new,
-                    new Item.Properties().component(DataComponents.UNBREAKABLE, Unit.INSTANCE).stacksTo(1).tool(BUILDITE_TOOL_MATERIAL, MINEABLE_WITH_BUILDERS_GAUNTLET, 1f, 1f, 0.0F).attributes(ItemAttributeModifiers.builder().add(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "builders_gauntlet_block_interaction_range"), 5f, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
+                    new Item.Properties().fireResistant().component(DataComponents.UNBREAKABLE, Unit.INSTANCE).stacksTo(1).tool(BUILDITE_TOOL_MATERIAL, MINEABLE_WITH_BUILDERS_GAUNTLET, 1f, 1f, 0.0F).attributes(ItemAttributeModifiers.builder().add(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(Identifier.fromNamespaceAndPath(BuilderSGauntlet.MOD_ID, "builders_gauntlet_block_interaction_range"), 5f, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 
     public static void initialize() {
         // Get the event for modifying entries in the ingredients group.
