@@ -1,0 +1,15 @@
+// 26.2	-999999999-01-01T00:00:00	Builder's Gauntlet/Block Loot Tables
+6688d0590f94630fad3ec23c737001bfa9a208c9 data/minecraft/loot_table/blocks/bush.json
+b275571f4c83b33e68ad3d6f4d464169edc79ea9 data/minecraft/loot_table/blocks/cobweb.json
+23543e08a58ee3a0bc7e1cbff6a0f26bfd256f22 data/minecraft/loot_table/blocks/dead_bush.json
+7f4885b0a72824b179be9a22e4925c7c3d83676c data/minecraft/loot_table/blocks/fern.json
+7481f1e20694fd2c85ef6a4dc2427b31615a6226 data/minecraft/loot_table/blocks/glow_lichen.json
+66bf72a893b39aa7d391469d957f72f7e3432f29 data/minecraft/loot_table/blocks/hanging_roots.json
+5f2136cd959e970de4d5686ab0e873c9068fd38a data/minecraft/loot_table/blocks/large_fern.json
+52e48f357c8075552a35ac3bcf2b648d741e7c96 data/minecraft/loot_table/blocks/nether_sprouts.json
+9f7ec8df98012ef67001b1b80584e1b2565fb9db data/minecraft/loot_table/blocks/seagrass.json
+25e8cfe4d9c814d66455a3544807bc89fa6104b9 data/minecraft/loot_table/blocks/short_dry_grass.json
+8734d11230015521ae2b1bd0ecce010f229a9eaa data/minecraft/loot_table/blocks/short_grass.json
+6c94b44ef824f74d50ab294ae9e038b2fe0187f2 data/minecraft/loot_table/blocks/small_dripleaf.json
+d5fc568ab09a0fa5ddb4192b9777ea3ccfe542bf data/minecraft/loot_table/blocks/tall_dry_grass.json
+0f324b29db958c17a03d42b21be80be72043797a data/minecraft/loot_table/blocks/tall_grass.json

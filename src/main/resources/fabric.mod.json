@@ -19,6 +19,9 @@
 		],
 		"client": [
 			"notenlish.buildersgauntlet.client.BuilderSGauntletClient"
+		],
+		"fabric-datagen": [
+			"notenlish.buildersgauntlet.client.datagen.ModDataGenerator"
 		]
 	},
 	"mixins": [
